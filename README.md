@@ -2,6 +2,8 @@
 
 This project is a mobile test automation framework using Appium with Java, integrated with Cucumber, TestNG, and Extent Reports libraries for managing, running tests, and generating reports. Maven is used as a Java project compiler to download the dependencies of these libraries.
 
+## Check the Working test demo here: https://youtu.be/kAXOpXR9xC8
+
 ## Prerequisites
 
 The following tools and libraries are required to run this project locally on a macOS computer using a virtual Android device:
@@ -71,9 +73,3 @@ Before running the tests, make sure the Appium server is running. You can start 
 
 After running the tests, an HTML report will be generated and saved in the `target/cucumber-reports` directory. You can view the report by opening the `cucumber-pretty.html` file in a web browser. Should look like this
 ![Screenshot 2024-05-19 at 18 18 34](https://github.com/lucianoarguello335/appium/assets/17627680/4d867b84-3fa7-4bee-bb9f-bf0b3dce6ca3)
-
-
-
-## Demo Video
-
-A demo video showing how to use this framework will be added soon.
