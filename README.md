@@ -14,7 +14,8 @@ The following tools and libraries are required to run this project locally on a 
 
 ## Cloning the Repository
 
-To clone this repository, run the following command in your terminal: git clone https://github.com/lucianoarguello335/appium.git
+To clone this repository, run the following command in your terminal: 
+`git clone https://github.com/lucianoarguello335/appium.git`
 
 ## Libraries
 
@@ -49,9 +50,9 @@ To install an Android app using an APK file on an Android Virtual Device (AVD), 
 
 3. Open a Terminal
   
-4. Navigate to the Directory Containing the APK File: cd path/to/your/apk/file
+4. Navigate to the Directory Containing the APK File: `cd path/to/your/apk/file`
 
-5. Install the APK Using ADB: adb install james_rider.apk (Replace james_rider.apk with the actual name of your APK file.)
+5. Install the APK Using ADB: `adb install james_rider.apk` (Replace james_rider.apk with the actual name of your APK file.)
 
 ## Running the Tests
 
@@ -59,9 +60,9 @@ Before running the tests, make sure the Appium server is running. You can start 
 
 ## To run the tests:
 1. Open Android Studio and launch the Virtual Device. Wait until it starts and shows the main screen.
-2. Run "appium" command on mac terminal. Wait for it to finish.
-3. Run "adb devices" command on terminal and make sure it shows the virtual device you created on Android Studio as connected.
-4. Run "mvn clean install" command on terminal and wait for it finish downloading dependencies.
+2. Run `appium` command on mac terminal. Wait for it to finish.
+3. Run `adb devices` command on terminal and make sure it shows the virtual device you created on Android Studio as connected.
+4. Run `mvn clean install` command on terminal and wait for it finish downloading dependencies.
 5. Open Intellij or Eclipse
 6. Right click on TestNGRunner.java and select "Run"
 
