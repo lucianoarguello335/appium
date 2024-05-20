@@ -8,10 +8,12 @@ This project is a mobile test automation framework using Appium with Java, integ
 
 The following tools and libraries are required to run this project locally on a macOS computer using a virtual Android device:
 
+- Please note that you need to have Node.js and npm (Node Package Manager) installed on your system to run these commands. If you haven’t installed them yet, you can do so by following the instructions provided in the official Node.js website.
 - **openjdk version 22**: You can download it here https://jdk.java.net/22/
 - **Maven**: Install it using Homebrew with the command `brew install maven`.
 - **Android Studio**: Download it from https://developer.android.com/studio and install it by following the instructions on the website. You will also need to set up a virtual Android device in the AVD Manager. Create one from Sndroid Studio itself.
 - **Appium**: Install it using npm with the command `npm install -g appium`. Make sure you have Node.js and npm installed before running this command.
+- **Install UiAutomator2 Driver**: Install the UiAutomator2 driver by running the following command in the terminal:`appium driver install uiautomator2` and check correct install by running `appium driver list`
 - **IntelliJ IDEA**: Download it from https://www.jetbrains.com/idea/download/?section=mac and install it by following the instructions on the website.
 
 ## Cloning the Repository
