@@ -2,12 +2,20 @@
 
 This project is a mobile test automation framework using Appium with Java, integrated with Cucumber, TestNG, and Extent Reports libraries for managing, running tests, and generating reports. Maven is used as a Java project compiler to download the dependencies of these libraries.
 
+# Notes on the new version
+
 ## Check the NEW!! working test demo here: https://youtu.be/Z3-AF4X5gwE
 
 ## New tests added since last version:
 - Profile info edit > Change name and lastname
 - Profile info edit > Change profile picture
 - Check Logout is successful
+
+## Version notes:
+- Initially, I started using the Cucumber "Background" feature to run the login part before each scenario. Later, this was removed due to the fact that, for some reason, the test run crashed when trying to run the "Open login page" part of the second scenario (meaning that it was the "second time" the background was being run). Which brings us to the second note ...
+- There is only a big scenario for login, changing name, changing profile picture and logging out: After removing the background, an error was still being triggered. Similar to the first issue, when the second scenario started to run, an error was triggered right at the start of it.
+
+# Instructions
 
 ## Prerequisites
 
