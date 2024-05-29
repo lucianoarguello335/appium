@@ -4,6 +4,8 @@ import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotInteractableException;
 
+import java.util.Random;
+
 public class Utils {
 
     private AppiumDriver driver;
@@ -59,5 +61,11 @@ public class Utils {
         } else {
             throw new ElementNotInteractableException("Element Not Found");
         }
+    }
+
+    public String getRandomName() {
+        String[] names = {"John", "Steve", "Jack", "Tom", "Tomas", "Luciano", "Latch", "Pamela", "Carlos", "Marcos", "Tarma", "Fio", "Fiona"};
+        Random random = new Random();
+        return names[random.nextInt(names.length)];
     }
 }
