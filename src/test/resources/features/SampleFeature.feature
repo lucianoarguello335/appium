@@ -1,11 +1,15 @@
-Feature: Login App
+Feature: Edit user info
 
-  @JamesRider
-  Scenario Outline: Successful Login with OTP
+  @UserData
+  Scenario: Change User name and picture
     Given I launch the application
-    When I complete the login process with "<country>", "<phone_number>" and "<OTP>"
-    Then I should be on the Rides screen
-
-    Examples:
-      | country           | phone_number | OTP    |
-      | Afghanistan (+93) | 701111112    | 123456 |
+    And I complete the login process with "Afghanistan (+93)", "701111112" and "123456"
+    And I should be on the Rides screen
+    When I click on the options button
+    And I should be on the account page
+    And I click on the profile name
+    And the user edits their name and last name
+    And the user changes their profile pic
+    And the changes were saved
+    And I click on the logout button
+    And I should be on the login page after the logout

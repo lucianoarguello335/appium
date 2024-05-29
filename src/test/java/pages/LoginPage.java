@@ -26,8 +26,6 @@ public class LoginPage {
     private static final By permissionsNotificationsAllowButton = By.id("com.hdw.james.rider:id/permissionsNotificationButton");
     private static final By permissionsNotificationsAllowConfirmButton = By.id("com.android.permissioncontroller:id/permission_allow_button");
     private static final By permissionsContinueButton = By.id("com.hdw.james.rider:id/permissionsContinueButton");
-    private static final By ridesLabel = By.xpath("//android.widget.TextView[@text=\"Rides\"]");
-
 
     public void launchApp(){
         driver = androidDriverFactory.getDriver();
@@ -38,7 +36,6 @@ public class LoginPage {
         }else{
             Assert.fail("Unable to launch application!");
         }
-
     }
 
     public void loginApp(String country, String phone, String otp){
@@ -75,13 +72,19 @@ public class LoginPage {
         }
     }
 
-    public void checkRidesOpened(){
-        if(utils.objectExists(ridesLabel)){
-            Assert.assertTrue(true,"Correctly located on 'Rides' Screen");
+    public void checkLoginOpened(){
+        if(utils.objectExists(getStartedButton)){
+            Assert.assertTrue(true,"Correctly located on 'Login' page initial screen");
         } else{
-            Assert.fail("Not on 'Rides' Screen");
+            Assert.fail("Not on 'Login' initial page");
         }
-
     }
 
+    public void checkLoginAfterLogout(){
+        if(utils.objectExists(phoneInputText)){
+            Assert.assertTrue(true,"Correctly located on 'Login' page after logout");
+        } else{
+            Assert.fail("Not on 'Login' page after logout");
+        }
+    }
 }
