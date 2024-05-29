@@ -10,7 +10,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = {"steps"},
-        tags = "@UserData or @Logout",
+        tags = "@UserData",
         plugin = {
                 "pretty",
                 "html:target/cucumber-reports/cucumber-pretty",

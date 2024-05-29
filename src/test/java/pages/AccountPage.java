@@ -23,7 +23,7 @@ public class AccountPage {
     private static final By imageGallerySlot2 = By.xpath("(//android.widget.ImageView[@resource-id=\"com.google.android.providers.media.module:id/icon_thumbnail\"])[2]");
     private static final By imageGallerySlot3 = By.xpath("(//android.widget.ImageView[@resource-id=\"com.google.android.providers.media.module:id/icon_thumbnail\"])[3]");
     private static final By confirmImageSelectedButton = By.id("com.hdw.james.rider:id/menu_crop");
-    private static final By profileUpdatedSuccesfullyMessage = By.id("com.hdw.james.rider:id/snackbar_text");
+    private static final By profileUpdatedSuccessfullyMessage = By.id("com.hdw.james.rider:id/snackbar_text");
 
 
     public void launchPage(){
@@ -45,30 +45,20 @@ public class AccountPage {
         String lastName = utils.getRandomName();
         utils.inputValueInTextBox(firstName, firstNameInput);
         utils.inputValueInTextBox(lastName, lastNameInput);
-        //utils.clickElement(doneButton);
-        //checkUserInfoWasUpdated(firstName, lastName);
     }
 
     public void clickProfileName(){
+        System.out.println("Clicking 'Profile Name' Button");
         utils.clickElement(profileNameButton);
     }
 
-    public void checkUserInfoWasUpdated(String firstName, String lastName) {
-        String actualName = utils.getElementText(profileNameButton);
-        String expectedName = firstName + " " + lastName;
-
-        if (actualName.equals(expectedName)) {
-            Assert.assertTrue(true, "User info was updated successfully.");
-        } else {
-            Assert.fail("User info was not updated. Expected: " + expectedName + ", but found: " + actualName);
-        }
-    }
-
     public void clickSignOutButton(){
+        System.out.println("Clicking 'Logout' Button");
         utils.clickElement(signoutButton);
     }
 
     public void clickDoneButton(){
+        System.out.println("Clicking 'Done' Button");
         utils.clickElement(doneButton);
     }
 
@@ -76,7 +66,6 @@ public class AccountPage {
         int randomInt = new java.util.Random().nextInt(3);
         By[] gallerySlotLocators = {imageGallerySlot1, imageGallerySlot2, imageGallerySlot3};
 
-        //utils.clickElement(profileNameButton);
         utils.clickElement(cameraButton);
         utils.clickElement(pickFromGalleryButton);
         utils.clickElement(gallerySlotLocators[randomInt]);
@@ -86,12 +75,11 @@ public class AccountPage {
 
     public void checkProfileUpdateSuccess(){
         utils.waitFor(1000);
-        if (utils.objectExists(profileUpdatedSuccesfullyMessage)) {
+        if (utils.objectExists(profileUpdatedSuccessfullyMessage)) {
             Assert.assertTrue(true, "User info was updated successfully.");
         } else {
             Assert.fail("User info was not updated.");
         }
 
     }
-
 }

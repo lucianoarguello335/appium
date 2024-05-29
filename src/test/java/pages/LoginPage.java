@@ -31,11 +31,18 @@ public class LoginPage {
         driver = androidDriverFactory.getDriver();
         utils = new Utils(driver);
         if(utils.objectExists(getStartedButton)){
-            System.out.println("Application Launched!");
             Assert.assertTrue(true,"Application Launched Successfully!");
         }else{
             Assert.fail("Unable to launch application!");
         }
+    }
+
+    public By getGetStartedButton() {
+        return getStartedButton;
+    }
+
+    public By getPhoneInputText(){
+        return phoneInputText;
     }
 
     public void loginApp(String country, String phone, String otp){
@@ -72,19 +79,12 @@ public class LoginPage {
         }
     }
 
-    public void checkLoginOpened(){
-        if(utils.objectExists(getStartedButton)){
-            Assert.assertTrue(true,"Correctly located on 'Login' page initial screen");
+    public void checkLoginStatus(By by, String successMessage, String failureMessage){
+        if(utils.objectExists(by)){
+            Assert.assertTrue(true, successMessage);
         } else{
-            Assert.fail("Not on 'Login' initial page");
+            Assert.fail(failureMessage);
         }
     }
 
-    public void checkLoginAfterLogout(){
-        if(utils.objectExists(phoneInputText)){
-            Assert.assertTrue(true,"Correctly located on 'Login' page after logout");
-        } else{
-            Assert.fail("Not on 'Login' page after logout");
-        }
-    }
 }

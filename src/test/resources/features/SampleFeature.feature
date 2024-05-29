@@ -8,8 +8,8 @@ Feature: Edit user info
     When I click on the options button
     And I should be on the account page
     And I click on the profile name
-    And the user edits their name and last name
-    And the user changes their profile pic
+    And I edit the name and last name
+    And I change the profile pic
     And the changes were saved
-    And I click on the logout button
+    Then I click on the logout button
     And I should be on the login page after the logout

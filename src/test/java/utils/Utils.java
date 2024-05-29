@@ -64,7 +64,7 @@ public class Utils {
     }
 
     public String getRandomName() {
-        String[] names = {"John", "Steve", "Jack", "Tom", "Tomas", "Luciano", "Latch", "Pamela"};
+        String[] names = {"John", "Steve", "Jack", "Tom", "Tomas", "Luciano", "Latch", "Pamela", "Carlos", "Marcos", "Tarma", "Fio", "Fiona"};
         Random random = new Random();
         return names[random.nextInt(names.length)];
     }

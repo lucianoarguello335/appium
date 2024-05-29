@@ -39,7 +39,7 @@ public class JamesRiderSteps {
         accountPage.launchPage();
     }
 
-    @When("the user edits their name and last name")
+    @When("I edit the name and last name")
     public void theUserEditsTheirNameAndLastName() {
         accountPage.editUserName();
     }
@@ -56,7 +56,9 @@ public class JamesRiderSteps {
 
     @Then("I should be on the login page")
     public void iShouldBeOnTheLoginPage() {
-        loginPage.checkLoginOpened();
+        loginPage.checkLoginStatus(loginPage.getGetStartedButton(),
+                "Correctly located on 'Login' page initial screen",
+                "Not on 'Login' initial page");
     }
 
     @Given("I click on the done button")
@@ -64,7 +66,7 @@ public class JamesRiderSteps {
         accountPage.clickDoneButton();
     }
 
-    @When("the user changes their profile pic")
+    @When("I change the profile pic")
     public void theUserChangesTheirProfilePic() {
         accountPage.changeProfilePic();
     }
@@ -81,6 +83,8 @@ public class JamesRiderSteps {
 
     @And("I should be on the login page after the logout")
     public void iShouldBeOnTheLoginPageAfterTheLogout() {
-        loginPage.checkLoginAfterLogout();
+        loginPage.checkLoginStatus(loginPage.getPhoneInputText(),
+                "Correctly located on 'Login' page after logout",
+                "Not on 'Login' page after logout");
     }
 }
