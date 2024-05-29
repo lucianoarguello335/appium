@@ -81,4 +81,5 @@ Before running the tests, make sure:
 ## Reports
 
 After running the tests, an HTML report will be generated and saved in the `target/cucumber-reports` directory. You can view the report by opening the `cucumber-pretty.html` file in a web browser. Should look like this
-![Screenshot 2024-05-19 at 18 18 34](https://github.com/lucianoarguello335/appium/assets/17627680/4d867b84-3fa7-4bee-bb9f-bf0b3dce6ca3)
+![Screenshot 2024-05-28 at 21 52 08](https://github.com/lucianoarguello335/appium/assets/17627680/1c0be02d-cb59-4133-862b-75667ab64b29)
+
