@@ -2,7 +2,12 @@
 
 This project is a mobile test automation framework using Appium with Java, integrated with Cucumber, TestNG, and Extent Reports libraries for managing, running tests, and generating reports. Maven is used as a Java project compiler to download the dependencies of these libraries.
 
-## Check the Working test demo here: https://youtu.be/lAu4o084O40
+## Check the NEW!! working test demo here: https://youtu.be/Z3-AF4X5gwE
+
+## New tests added since last version:
+- Profile info edit > Change name and lastname
+- Profile info edit > Change profile picture
+- Check Logout is successful
 
 ## Prerequisites
 
@@ -60,7 +65,9 @@ To install an Android app using an APK file on an Android Virtual Device (AVD), 
 
 ## Running the Tests
 
-Before running the tests, make sure the Appium server is running. You can start it by running the command `appium` in your terminal.
+Before running the tests, make sure: 
+1. The Appium server is running. You can start it by running the command `appium` in your terminal.
+2. Make sure you have at least 3 images on your gallery. This is for the profile pic upload test. The easiest way to do so it's to simply take 3 screenshots and save them.
 
 ## To run the tests:
 1. Open Android Studio and launch the Virtual Device. Wait until it starts and shows the main screen.
