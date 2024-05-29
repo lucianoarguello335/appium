@@ -7,19 +7,16 @@ import utils.ConfigFileReader;
 import io.cucumber.testng.*;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
-
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = {"steps"},
-        tags = "@JamesRider",
+        tags = "@UserData or @Logout",
         plugin = {
                 "pretty",
                 "html:target/cucumber-reports/cucumber-pretty",
-                "json:target/cucumber-reports/CucumberTestReport.json",
                 "rerun:target/cucumber-reports/rerun.txt",
                 "json:target/cucumber-reports/CucumberTestReport.json"
         })
-
 
 public class TestNGRunner {
     private TestNGCucumberRunner testNGCucumberRunner;
@@ -46,5 +43,4 @@ public class TestNGRunner {
     public void tearDownClass() throws Exception {
         testNGCucumberRunner.finish();
     }
-
 }

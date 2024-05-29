@@ -24,6 +24,7 @@ public class AndroidDriverFactory {
         cap.setCapability("platformName", "Android");
         cap.setCapability("platformVersion", "14.0");
         cap.setCapability("automationName", "uiautomator2");
+        cap.setCapability("newCommandTimeout", 120);
 
         cap.setCapability("appPackage", appPackage);
         cap.setCapability("appActivity", appActivity);
