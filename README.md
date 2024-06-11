@@ -4,7 +4,7 @@ This project is a mobile test automation framework using Appium with Java, integ
 
 # Notes on the new version
 
-## Check the NEW!! working test demo here: https://youtu.be/Z3-AF4X5gwE
+## Check the latest working test demo here: https://youtu.be/wORi4_AnHC8
 
 ## New tests added since last version:
 - Profile info edit > Change name and lastname
@@ -89,5 +89,6 @@ Before running the tests, make sure:
 ## Reports
 
 After running the tests, an HTML report will be generated and saved in the `target/cucumber-reports` directory. You can view the report by opening the `cucumber-pretty.html` file in a web browser. Should look like this
-![Screenshot 2024-05-28 at 21 52 08](https://github.com/lucianoarguello335/appium/assets/17627680/1c0be02d-cb59-4133-862b-75667ab64b29)
+<img width="1270" alt="2024-06-11-15 22 42" src="https://github.com/lucianoarguello335/appium/assets/17627680/4779952a-0b8c-4cc1-8231-57d99c5940ea">
+
 
