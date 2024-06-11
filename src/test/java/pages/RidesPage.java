@@ -13,7 +13,7 @@ import utils.Utils;
 public class RidesPage {
     AndroidDriver driver = null;
     AndroidDriverFactory androidDriverFactory = AndroidDriverFactory.getInstanceOfAndroidDriverFactory();
-    Utils utils;
+    Utils utils = Utils.getInstance(driver);
 
     // Page Objects
     private static final By ridesLabel = By.xpath("//android.widget.TextView[@text=\"Rides\"]");
@@ -21,7 +21,6 @@ public class RidesPage {
 
     public void launchPage(){
         driver = androidDriverFactory.getDriver();
-        utils = new Utils(driver);
         checkRidesOpened();
     }
 

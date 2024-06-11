@@ -1,15 +1,18 @@
 package pages;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import utils.AndroidDriverFactory;
 import utils.Utils;
+import java.time.Duration;
+
 
 public class AccountPage {
     AndroidDriver driver = null;
     AndroidDriverFactory androidDriverFactory = AndroidDriverFactory.getInstanceOfAndroidDriverFactory();
-    Utils utils;
+    Utils utils = Utils.getInstance(driver);
 
     // Page Objects
     private static final By profileNameButton = By.id("com.hdw.james.rider:id/profileName");
@@ -28,7 +31,6 @@ public class AccountPage {
 
     public void launchPage(){
         driver = androidDriverFactory.getDriver();
-        utils = new Utils(driver);
         checkAccountOpened();
     }
 
@@ -80,6 +82,5 @@ public class AccountPage {
         } else {
             Assert.fail("User info was not updated.");
         }
-
     }
 }

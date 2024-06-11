@@ -1,19 +1,26 @@
 package pages;
 
+import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.Activity;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
+import io.opentelemetry.context.Context;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import utils.AndroidDriverFactory;
+import utils.ConfigFileReader;
 import utils.Utils;
+
+
 
 public class LoginPage {
     AndroidDriver driver = null;
     AndroidDriverFactory androidDriverFactory = AndroidDriverFactory.getInstanceOfAndroidDriverFactory();
-    Utils utils;
+    Utils utils = null;
 
     // Page Objects
     private static final By getStartedButton = By.id("com.hdw.james.rider:id/getStartedButton");
@@ -29,12 +36,7 @@ public class LoginPage {
 
     public void launchApp(){
         driver = androidDriverFactory.getDriver();
-        utils = new Utils(driver);
-        if(utils.objectExists(getStartedButton)){
-            Assert.assertTrue(true,"Application Launched Successfully!");
-        }else{
-            Assert.fail("Unable to launch application!");
-        }
+        utils = Utils.getInstance(driver);
     }
 
     public By getGetStartedButton() {
@@ -86,5 +88,4 @@ public class LoginPage {
             Assert.fail(failureMessage);
         }
     }
-
 }

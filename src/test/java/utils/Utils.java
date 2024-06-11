@@ -9,9 +9,19 @@ import java.util.Random;
 public class Utils {
 
     private AppiumDriver driver;
+    private static Utils instance = null;
 
-    public Utils(AppiumDriver driver){
+    private Utils (AppiumDriver driver){
         this.driver = driver;
+    }
+
+    public static Utils getInstance(AppiumDriver driver) {
+        if (instance == null) {
+            instance = new Utils(driver);
+        } else {
+            instance.driver = driver; // Update the driver if instance is not null
+        }
+        return instance;
     }
 
     public void waitFor(long milliSeconds) {
